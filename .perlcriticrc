@@ -1,0 +1,8 @@
+[-CodeLayout::RequireTidyCode]
+[-Miscellanea::RequireRcsKeywords]
+[-Modules::RequireVersionVar]
+[-ValuesAndExpressions::ProhibitVersionStrings]
+[-CodeLayout::ProhibitTrailingWhitespace]
+
+[ValuesAndExpressions::RequireInterpolationOfMetachars]
+rcs_keywords = gte lte
