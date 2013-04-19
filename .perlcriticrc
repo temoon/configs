@@ -3,6 +3,21 @@
 [-Modules::RequireVersionVar]
 [-ValuesAndExpressions::ProhibitVersionStrings]
 [-CodeLayout::ProhibitTrailingWhitespace]
+[-ValuesAndExpressions::RequireInterpolationOfMetachars]
+[-ValuesAndExpressions::ProhibitMagicNumbers]
+[-Subroutines::ProhibitExcessComplexity]
+[-ValuesAndExpressions::ProhibitEmptyQuotes]
+[-RegularExpressions::RequireLineBoundaryMatching]
+[-RegularExpressions::ProhibitComplexRegexes]
+[-Documentation::PodSpelling]
+[-Documentation::RequirePodAtEnd]
 
-[ValuesAndExpressions::RequireInterpolationOfMetachars]
-rcs_keywords = gte lte
+[ValuesAndExpressions::ProhibitInterpolationOfLiterals]
+allow_if_string_contains_single_quote = 1
+
+[RegularExpressions::RequireExtendedFormatting]
+minimum_regex_length_to_complain_about = 40
+
+[Documentation::RequirePodSections]
+lib_sections    = NAME | SYNOPSIS | DESCRIPTION | SUBROUTINES/METHODS | CONFIGURATION AND ENVIRONMENT | DEPENDENCIES | INCOMPATIBILITIES | AUTHOR
+script_sections = NAME | USAGE | DESCRIPTION | REQUIRED ARGUMENTS | OPTIONS | CONFIGURATION | DEPENDENCIES | INCOMPATIBILITIES | AUTHOR
