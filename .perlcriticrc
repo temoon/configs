@@ -25,6 +25,15 @@
 [-ValuesAndExpressions::ProhibitCommaSeparatedStatements]
 [-ControlStructures::ProhibitDeepNests]
 [-Subroutines::ProhibitManyArgs]
+[-Subroutines::ProhibitBuiltinHomonyms]
+[-TestingAndDebugging::ProhibitNoStrict]
+[-TestingAndDebugging::ProhibitNoWarnings]
+[-ValuesAndExpressions::ProhibitMixedBooleanOperators]
+[-ControlStructures::ProhibitCascadingIfElse]
+[-TestingAndDebugging::ProhibitProlongedStrictureOverride]
+
+[Subroutines::RequireArgUnpacking]
+short_subroutine_statements = 2
 
 [ValuesAndExpressions::ProhibitInterpolationOfLiterals]
 allow_if_string_contains_single_quote = 1
@@ -33,8 +42,15 @@ allow_if_string_contains_single_quote = 1
 min_value = 65535
 
 [Variables::RequireLocalizedPunctuationVars]
-allow = %ENV
+allow = %ENV %INC
 
 [Documentation::RequirePodSections]
-lib_sections    = NAME | SYNOPSIS | DESCRIPTION | SUBROUTINES/METHODS | AUTHOR
-script_sections = NAME | USAGE | DESCRIPTION | OPTIONS | AUTHOR
+lib_sections    = NAME | SYNOPSIS | DESCRIPTION | AUTHOR
+script_sections = NAME | USAGE | DESCRIPTION | AUTHOR
+
+[TestingAndDebugging::RequireUseStrict]
+equivalent_modules = Mojo::Base Naga Naga::Base AP AP::Base Crane Crane::Base
+
+[TestingAndDebugging::RequireUseWarnings]
+equivalent_modules = Mojo::Base Naga Naga::Base AP AP::Base Crane Crane::Base
+
